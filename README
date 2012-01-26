@@ -1,4 +1,4 @@
-Message queue module.
+Message queue module for Kohana 3.2
 
 Passing messages to a queue and then print them with a nice looking Twitter style template.
 Use CSS styles from: http://twitter.github.com/bootstrap/
