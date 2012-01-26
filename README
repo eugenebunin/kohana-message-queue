@@ -1,0 +1,17 @@
+Message queue module.
+
+Passing messages to a queue and then print them with a nice looking Twitter style template.
+Use CSS styles from: http://twitter.github.com/bootstrap/
+
+1. To enqueue a message do like this:
+Message::queue( array('type' => 'alert', 'text' => 'With love from Russia!') );
+or
+Message::queue( array('type' => 'success', 'text' => 'Data successfully saved.') ) 
+
+2. To print messages use:
+Message::render();
+Note: add this in your app template in order to print messages after app is redirected.
+
+Supports:
+1. Different views: in config or Message::render( array('view' => 'message/basic') ). 
+2. Alert types: alert, success, error.
