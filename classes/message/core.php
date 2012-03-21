@@ -2,13 +2,13 @@
 
 /**
  * Message queue module
- * Works with Bootstrap v1.2.0 from Twitter 
+ * Works with Bootstrap v2.0.0 from Twitter 
  * @link: http://twitter.github.com/bootstrap/
  * 
  * 1. To enqueue a message do like this:
- * Message::queue( array('type' => 'alert', 'text' => 'Hello from Russia!') );
+ * Message::queue( array('type' => 'alert alert-notify', 'text' => 'Hello from Russia!') );
  * or
- * Message::queue( array('type' => 'success', 'text' => 'Data successfully saved.') );
+ * Message::queue( array('type' => 'alert alert-success', 'text' => 'Data successfully saved.') );
  * 
  * 2. To print messages use:
  * Message::render();
@@ -16,7 +16,16 @@
  * 
  * Supports:
  * - Message views: in config or Message::render( array('view' => 'message/basic') ). 
- * - Message alert types: alert, success, error.
+ * - Message alert types: alert-notify, alert-success, alert-error.
+ * 
+ * TODO:
+ * May be it makes sense to change:
+ * 'type' => 'alert alert-notify'
+ * to something more clear like:
+ * 'type' => 'notify'
+ * So, it will become:
+ * Message::queue( array('type' => 'notify', 'text' => 'Hello from Russia!') );
+ * 
  * 
  * @package Kohana/Message
  * @category Modules

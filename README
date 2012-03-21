@@ -1,14 +1,14 @@
 Message queue module for Kohana 3.2
-Works with Bootstrap v1.2.0 from Twitter
+Works with Bootstrap v2.0.0 from Twitter
 @link http://twitter.github.com/bootstrap/
 
 Passing messages to a queue and then print them with a nice looking Twitter style template.
 Use CSS styles from: http://twitter.github.com/bootstrap/
 
 1. To enqueue a message do like this:
-Message::queue( array('type' => 'alert', 'text' => 'With love from Russia!') );
+Message::queue( array('type' => 'alert alert-notify', 'text' => 'Hello from Russia!') );
 or
-Message::queue( array('type' => 'success', 'text' => 'Data successfully saved.') ) 
+Message::queue( array('type' => 'alert alert-success', 'text' => 'Data successfully saved.') );
 
 2. To print messages use:
 Message::render();
@@ -16,4 +16,4 @@ Note: add this in your app template in order to print messages after app is redi
 
 Supports:
 1. Different views: in config or Message::render( array('view' => 'message/basic') ). 
-2. Alert types: alert, success, error.
+2. Message alert types: alert-notify, alert-success, alert-error.
