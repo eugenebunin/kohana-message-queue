@@ -34,6 +34,11 @@
  */
 abstract class Message_Core {
 	
+	const ERROR 	= 'alert alert-error';
+	const SUCCESS 	= 'alert alert-success';
+	const INFO 		= 'alert alert-info';
+	const ALERT 	= 'alert';
+
 	/**
 	 * Setter/Getter message queue.
 	 * 
