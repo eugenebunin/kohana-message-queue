@@ -6,22 +6,18 @@
  * @link: http://twitter.github.com/bootstrap/
  * 
  * 1. To enqueue a message do like this:
- * Message::queue( array('type' => 'alert alert-notify', 'text' => 'Hello from Russia!') );
+ * Message::queue( array('type' => Message::INFO, 'text' => 'Hello from Russia!') );
  * or
- * Message::queue( array('type' => 'alert alert-success', 'text' => 'Data successfully saved.') );
+ * Message::queue( array('type' => Message::SUCCESS, 'text' => 'Data successfully saved.') );
  * 
  * 2. To print messages use:
  * Message::render();
  * Note: add this in your app template in order to print messages after app is redirected.
  * 
- * Supports:
- * - Message views: set a view in config or Message::render( array('view' => 'message/basic') ). 
- * - Alert types: alert-notify, alert-success, alert-error
- * 
- * Message::queue( array('type' => Message::NOTIFY, 'text' => 'Hello from Russia!') );
+ * Message::queue( array('type' => Message::INFO, 'text' => 'Hello from Russia!') );
  * Message::queue( array('type' => Message::SUCCESS, 'text' => 'Data saved.') );
  * Message::queue( array('type' => Message::ERROR, 'text' => 'Oops, something goes wrong.') );
- * Message::queue( array('type' => Message::ALERT, 'text' => 'Just take your attention.') );
+ * Message::queue( array('type' => Message::NOTIFY, 'text' => 'Just take your attention.') );
  * 
  * @package Kohana/Message
  * @category Modules
@@ -32,8 +28,8 @@ abstract class Message_Core {
 	
 	const ERROR 	= 'alert alert-error';
 	const SUCCESS 	= 'alert alert-success';
+	const NOTIFY 	= 'alert alert-notify';
 	const INFO 		= 'alert alert-info';
-	const ALERT 	= 'alert';
 
 	/**
 	 * Setter/Getter message queue.
