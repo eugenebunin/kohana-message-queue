@@ -26,7 +26,7 @@
  */
 abstract class Message_Core {
 	
-	const ERROR 	= 'alert alert-error';
+	const ERROR 	= 'alert alert-danger';
 	const SUCCESS 	= 'alert alert-success';
 	const NOTIFY 	= 'alert alert-notify';
 	const INFO 		= 'alert alert-info';
